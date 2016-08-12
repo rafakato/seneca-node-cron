@@ -56,10 +56,43 @@ describe('role:cron', { timeout: 1000 }, () => {
       });
     });
 
-    it('should return job details after created', (done) => {
+    it('should convert object tickAction to function before creating job', (done) => {
       senecaInstance.act({ role: 'cron', cmd: 'create' }, {
         cronTime: '* * * * *',
         tickAction: { role: 'test', cmd: 'tick' }
+      }, (err, response) => {
+        try {
+          expect(err).to.not.exist();
+          expect(response.id).to.be.a.string();
+          expect(response.status).to.be.equal('created');
+          done();
+        } catch (err) {
+          done(err);
+        }
+      });
+    });
+
+    it('should convert string tickAction to function before creating job', (done) => {
+      senecaInstance.act({ role: 'cron', cmd: 'create' }, {
+        cronTime: '* * * * *',
+        tickAction: 'role:test,cmd:tick'
+      }, (err, response) => {
+        try {
+          expect(err).to.not.exist();
+          expect(response.id).to.be.a.string();
+          expect(response.status).to.be.equal('created');
+          done();
+        } catch (err) {
+          done(err);
+        }
+      });
+    });
+
+    it('should return job details after created', (done) => {
+      senecaInstance.act({ role: 'cron', cmd: 'create' }, {
+        cronTime: '* * * * *',
+        tickAction: () => {
+        }
       }, (err, response) => {
         try {
           expect(err).to.not.exist();
