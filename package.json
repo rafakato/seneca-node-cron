@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "description": "node-cron plugin for Seneca framework",
   "main": "lib/cron.js",
+  "scripts": {
+    "test": "lab -v -P test -t 80",
+    "cover": "lab -s -P test -r lcov | coveralls"
+  },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   },
   "repository": {
     "type": "git",
@@ -21,5 +25,18 @@
     "email": "rafael@kato.io"
   },
   "contributors": [],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cron": "^1.1.0",
+    "joi": "^9.0.4",
+    "moment-timezone": "^0.5.5",
+    "uuid": "^2.0.2"
+  },
+  "devDependencies": {
+    "code": "^3.0.2",
+    "coveralls": "^2.11.12",
+    "lab": "^10.9.0",
+    "seneca": "^2.1.0",
+    "seneca-stub": "^1.1.2"
+  }
 }

@@ -25,3 +25,8 @@ To run tests, simply use npm:
 ```
 npm run test
 ```
+
+[travis-badge]: https://api.travis-ci.org/rafakato/seneca-node-cron.svg
+[travis-url]: https://travis-ci.org/rafakato/seneca-node-cron
+[npm-badge]: https://badge.fury.io/js/seneca-node-cron.svg
+[npm-url]: https://badge.fury.io/js/seneca-node-cron
