@@ -1,0 +1,25 @@
+{
+  "name": "seneca-node-cron",
+  "version": "0.0.1",
+  "description": "node-cron plugin for Seneca framework",
+  "main": "lib/cron.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rafakato/seneca-node-cron.git"
+  },
+  "keywords": [
+    "seneca",
+    "node-cron",
+    "cron",
+    "plugin"
+  ],
+  "author": {
+    "name": "Rafael Kato",
+    "email": "rafael@kato.io"
+  },
+  "contributors": [],
+  "license": "MIT"
+}
