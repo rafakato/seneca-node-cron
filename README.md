@@ -4,7 +4,7 @@
 # seneca-node-cron
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
-[![Coverage Status](https://coveralls.io/repos/mirceaalexandru/seneca-cron/badge.svg?branch=master&service=github)](https://coveralls.io/github/mirceaalexandru/seneca-cron?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/rafakato/seneca-node-cron/badge.svg?branch=master)](https://coveralls.io/github/rafakato/seneca-node-cron?branch=master)
 
 
 [node-cron][node-cron-url] plugin for Seneca framework.
